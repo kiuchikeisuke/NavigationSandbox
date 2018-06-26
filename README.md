@@ -1,2 +1,4 @@
 # NavigationSandbox
 JetpackのNavigationをいじくりまわす場所
+
+MainFragmentに色々書いてあるので、コメントアウト外したりつけたりしていじる感じ

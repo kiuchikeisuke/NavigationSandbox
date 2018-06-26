@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+    <!-- android:nameにセットされるfragmentが、ActivityとしてセットされるFragmentになるっぽい。ここがNavFragmentだと、NavigationFragmentの管理下に置かれるイメージかな-->
+    <!-- NavHostFragmentが１つのViewとして使い回されるイメージ。これにセットされたFragmentたちが順次入れ替わる感じになってる-->
+    <!-- なので、Activityを切り替えた場合でも、NavHostFragmentのパーツはCurrentのパーツが表になる。
+    別Activityにいって、完全に別系統のNavGrapthとしたい場合は、新たにnav_grapth.xmlを定義する必要がある。
+    その場合、NavHostFragment間ではFragmentやActivityが別世界に分かれる（つまり、nav_graph1で追加したFragment1はnav_graph2では見えない（追加すれば見えるけど）-->
+    <fragment
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/my_nav_host_fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph2"
+        />
+    <fragment
+        android:id="@+id/part_act2_fragment3"
+        android:name="com.example.kkiuchi.myapplication.ui.main.Main3Fragment"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

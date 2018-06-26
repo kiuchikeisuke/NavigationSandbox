@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph2"
+            app:startDestination="@id/main2Fragment2">
+
+    <fragment
+        android:id="@+id/main2Fragment2"
+        android:name="com.example.kkiuchi.myapplication.ui.main.Main2Fragment"
+        android:label="Main2Fragment">
+        <action
+            android:id="@+id/action_main2Fragment2_to_mainActivity2"
+            app:destination="@id/mainActivity2"/>
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.kkiuchi.myapplication.MainActivity"
+        android:label="main_activity"
+        tools:layout="@layout/main_activity"/>
+</navigation>
